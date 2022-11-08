@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    {% include toc.html html=content %}
-    
+
+
 {% seo %}
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
@@ -17,6 +17,7 @@
   <body>
     <div class="wrapper">
       <header>
+        Hello
         <h1 class="header">{{ site.title | default: site.github.repository_name }}</h1>
         <p class="header">{{ site.description | default: site.github.project_tagline }}</p>
 
@@ -32,12 +33,17 @@
           <p class="header">This project is maintained by <a class="header name" href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
         {% endif %}
 
+
+
         {% if site.github.is_user_page %}
           <ul>
             <li><a class="buttons github" href="{{ site.github.owner_url }}">GitHub Profile</a></li>
           </ul>
         {% endif %}
+        <div class="contents">        {% include toc.html html=content %}</div>
       </header>
+
+
 
       <section>
         {{ content }}
